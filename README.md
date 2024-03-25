@@ -9,7 +9,7 @@ In reading in from this file, since it starts at line 1, we will say that the nt
 
 For the random number generator: https://cplusplus.com/reference/cstdlib/rand/
 
-ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a 
+ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 https://cplusplus.com/forum/beginner/7303/
 
 This code makes use of tuples of length 3; this was done by using https://en.cppreference.com/w/cpp/utility/tuple
 
