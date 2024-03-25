@@ -1,6 +1,10 @@
 #ifndef __wordle__
 #define __wordle__
 
+
+///
+/// Testing doxygen
+///
 #include <iostream>
 #include <string> 
 #include <map>
