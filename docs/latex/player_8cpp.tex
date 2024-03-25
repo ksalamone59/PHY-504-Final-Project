@@ -1,0 +1,44 @@
+\hypertarget{player_8cpp}{}\doxysection{player.\+cpp File Reference}
+\label{player_8cpp}\index{player.cpp@{player.cpp}}
+
+
+Defining object specific to class \mbox{\hyperlink{classplayer}{player}}.  
+
+
+{\ttfamily \#include \char`\"{}wordle.\+h\char`\"{}}\newline
+Include dependency graph for player.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{player_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{player_8cpp_af77a4e5a2fba9b3a40009cbbe5f5a027}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classplayer}{player}} \&User)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defining object specific to class \mbox{\hyperlink{classplayer}{player}}. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player_8cpp_af77a4e5a2fba9b3a40009cbbe5f5a027}\label{player_8cpp_af77a4e5a2fba9b3a40009cbbe5f5a027}} 
+\index{player.cpp@{player.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!player.cpp@{player.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classplayer}{player}} \&}]{User }\end{DoxyParamCaption})}
+
+Operator to print out information of the game (number of guesses, was it solved, and the true answer) with nice output. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The ostream object we are saving this information to. \\
+\hline
+{\em User} & The \mbox{\hyperlink{classplayer}{player}} object containing the results of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Number of Guesses\+: (\+N\+\_\+\+GUESS). Was the Wordle solved? (\+PROPERLY\+\_\+\+SOLVED). The real answer was\+: (\+TRUE\+\_\+\+RESULT).\char`\"{} 
+\end{DoxyReturn}

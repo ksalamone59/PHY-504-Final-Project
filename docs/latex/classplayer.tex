@@ -1,0 +1,127 @@
+\hypertarget{classplayer}{}\doxysection{player Class Reference}
+\label{classplayer}\index{player@{player}}
+
+
+{\ttfamily \#include $<$wordle.\+h$>$}
+
+
+
+Inheritance diagram for player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classplayer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classplayer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplayer_a97de83bce15f880241f561b55b016b02}{player}} ()
+\item 
+\mbox{\hyperlink{classplayer_aab5d2e47b80e0481f09ca0df8b823057}{$\sim$player}} ()
+\item 
+bool \mbox{\hyperlink{classplayer_a8d072cd4b54a51c5b23ed48dc969c6b2}{get\+\_\+result}} ()
+\item 
+u\+\_\+int \mbox{\hyperlink{classplayer_a9cee532f150a580d768c9776291cdbfc}{get\+\_\+n\+\_\+guess}} ()
+\item 
+std\+::string \mbox{\hyperlink{classplayer_a75077e017335b2d81e314b11460f1fee}{get\+\_\+answer}} ()
+\item 
+void \mbox{\hyperlink{classplayer_ae399db61e97f5ee18dad7b4f5f845247}{set\+\_\+solved\+\_\+status}} (const \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} \&solved)
+\item 
+void \mbox{\hyperlink{classplayer_a7c43d6990a2edb3c6d6518765a23eebd}{print\+\_\+player\+\_\+results}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classplayer_af77a4e5a2fba9b3a40009cbbe5f5a027}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classplayer}{player}} \&User)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The derived class of the player of the game. Handles the I/O of the results of the game, calling the initializing of the game, and an operator to print out the results nicely. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplayer_a97de83bce15f880241f561b55b016b02}\label{classplayer_a97de83bce15f880241f561b55b016b02}} 
+\index{player@{player}!player@{player}}
+\index{player@{player}!player@{player}}
+\doxysubsubsection{\texorpdfstring{player()}{player()}}
+{\footnotesize\ttfamily player\+::player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Empty constructor for player; just instantly initialize the game \mbox{\Hypertarget{classplayer_aab5d2e47b80e0481f09ca0df8b823057}\label{classplayer_aab5d2e47b80e0481f09ca0df8b823057}} 
+\index{player@{player}!````~player@{$\sim$player}}
+\index{````~player@{$\sim$player}!player@{player}}
+\doxysubsubsection{\texorpdfstring{$\sim$player()}{~player()}}
+{\footnotesize\ttfamily player\+::$\sim$player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor for player class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classplayer_a75077e017335b2d81e314b11460f1fee}\label{classplayer_a75077e017335b2d81e314b11460f1fee}} 
+\index{player@{player}!get\_answer@{get\_answer}}
+\index{get\_answer@{get\_answer}!player@{player}}
+\doxysubsubsection{\texorpdfstring{get\_answer()}{get\_answer()}}
+{\footnotesize\ttfamily std\+::string player\+::get\+\_\+answer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter function to get the private answer to the game \mbox{\Hypertarget{classplayer_a9cee532f150a580d768c9776291cdbfc}\label{classplayer_a9cee532f150a580d768c9776291cdbfc}} 
+\index{player@{player}!get\_n\_guess@{get\_n\_guess}}
+\index{get\_n\_guess@{get\_n\_guess}!player@{player}}
+\doxysubsubsection{\texorpdfstring{get\_n\_guess()}{get\_n\_guess()}}
+{\footnotesize\ttfamily u\+\_\+int player\+::get\+\_\+n\+\_\+guess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter function to get the private number of guesses it took to end the game \mbox{\Hypertarget{classplayer_a8d072cd4b54a51c5b23ed48dc969c6b2}\label{classplayer_a8d072cd4b54a51c5b23ed48dc969c6b2}} 
+\index{player@{player}!get\_result@{get\_result}}
+\index{get\_result@{get\_result}!player@{player}}
+\doxysubsubsection{\texorpdfstring{get\_result()}{get\_result()}}
+{\footnotesize\ttfamily bool player\+::get\+\_\+result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter function to get the private result of the game \mbox{\Hypertarget{classplayer_a7c43d6990a2edb3c6d6518765a23eebd}\label{classplayer_a7c43d6990a2edb3c6d6518765a23eebd}} 
+\index{player@{player}!print\_player\_results@{print\_player\_results}}
+\index{print\_player\_results@{print\_player\_results}!player@{player}}
+\doxysubsubsection{\texorpdfstring{print\_player\_results()}{print\_player\_results()}}
+{\footnotesize\ttfamily void player\+::print\+\_\+player\+\_\+results (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Printing out, nicely, if the player passed or failed the wordle game \mbox{\Hypertarget{classplayer_ae399db61e97f5ee18dad7b4f5f845247}\label{classplayer_ae399db61e97f5ee18dad7b4f5f845247}} 
+\index{player@{player}!set\_solved\_status@{set\_solved\_status}}
+\index{set\_solved\_status@{set\_solved\_status}!player@{player}}
+\doxysubsubsection{\texorpdfstring{set\_solved\_status()}{set\_solved\_status()}}
+{\footnotesize\ttfamily void player\+::set\+\_\+solved\+\_\+status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} \&}]{solved }\end{DoxyParamCaption})}
+
+Setting the results of the game, from the output of the game class to the player class 
+\begin{DoxyParams}{Parameters}
+{\em solved} & The results of the game, communicated from the game class. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classplayer_af77a4e5a2fba9b3a40009cbbe5f5a027}\label{classplayer_af77a4e5a2fba9b3a40009cbbe5f5a027}} 
+\index{player@{player}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!player@{player}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classplayer}{player}} \&}]{User }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Operator to print out information of the game (number of guesses, was it solved, and the true answer) with nice output. 
+\begin{DoxyParams}{Parameters}
+{\em os} & The ostream object we are saving this information to. \\
+\hline
+{\em User} & The \mbox{\hyperlink{classplayer}{player}} object containing the results of the game. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Number of Guesses\+: (\+N\+\_\+\+GUESS). Was the Wordle solved? (\+PROPERLY\+\_\+\+SOLVED). The real answer was\+: (\+TRUE\+\_\+\+RESULT).\char`\"{} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wordle_8h}{wordle.\+h}}\item 
+\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

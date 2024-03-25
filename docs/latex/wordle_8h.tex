@@ -1,0 +1,94 @@
+\hypertarget{wordle_8h}{}\doxysection{wordle.\+h File Reference}
+\label{wordle_8h}\index{wordle.h@{wordle.h}}
+
+
+Header file containing includes, global variables, and forward declarations for class game and player.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for wordle.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wordle_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{wordle_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgame}{game}}
+\item 
+class \mbox{\hyperlink{classplayer}{player}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} = std\+::tuple$<$ int, bool, std\+::string $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{wordle_8h_a8bc779337e61d3ab6ad13f81e102f327}{YELLOW}} \{\char`\"{}\textbackslash{}033\mbox{[}0;33;40m\char`\"{}\}
+\item 
+const std\+::string \mbox{\hyperlink{wordle_8h_ace790543ffe3663a896a5f074bd2a3ef}{GREEN}} \{\char`\"{}\textbackslash{}033\mbox{[}0;32;40m\char`\"{}\}
+\item 
+const std\+::string \mbox{\hyperlink{wordle_8h_a2f0a977841de68d04e86bc84c57c3ff3}{RESET}} \{\char`\"{}\textbackslash{}033\mbox{[}0;37;40m\char`\"{}\}
+\item 
+const std\+::string \mbox{\hyperlink{wordle_8h_a481535a6ff4b51d01dbfcc3cac54bd36}{WHITE\+\_\+\+BACKGROUND}} \{\char`\"{}\textbackslash{}033\mbox{[}0;37\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file containing includes, global variables, and forward declarations for class game and player. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}\label{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}} 
+\index{wordle.h@{wordle.h}!results@{results}}
+\index{results@{results}!wordle.h@{wordle.h}}
+\doxysubsubsection{\texorpdfstring{results}{results}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} =  std\+::tuple$<$int,bool,std\+::string$>$}
+
+Alias for std\+::tuple$<$int,bool,std\+::string$>$ to hold the...$<$number\+\_\+guesses, properly\+\_\+solved\+\_\+game (True for yes, False for no), true answer$>$ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{wordle_8h_ace790543ffe3663a896a5f074bd2a3ef}\label{wordle_8h_ace790543ffe3663a896a5f074bd2a3ef}} 
+\index{wordle.h@{wordle.h}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!wordle.h@{wordle.h}}
+\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
+{\footnotesize\ttfamily const std\+::string GREEN \{\char`\"{}\textbackslash{}033\mbox{[}0;32;40m\char`\"{}\}}
+
+ANSI color coding for green text with black background. \mbox{\Hypertarget{wordle_8h_a2f0a977841de68d04e86bc84c57c3ff3}\label{wordle_8h_a2f0a977841de68d04e86bc84c57c3ff3}} 
+\index{wordle.h@{wordle.h}!RESET@{RESET}}
+\index{RESET@{RESET}!wordle.h@{wordle.h}}
+\doxysubsubsection{\texorpdfstring{RESET}{RESET}}
+{\footnotesize\ttfamily const std\+::string RESET \{\char`\"{}\textbackslash{}033\mbox{[}0;37;40m\char`\"{}\}}
+
+ANSI color coding for white text with black background. \mbox{\Hypertarget{wordle_8h_a481535a6ff4b51d01dbfcc3cac54bd36}\label{wordle_8h_a481535a6ff4b51d01dbfcc3cac54bd36}} 
+\index{wordle.h@{wordle.h}!WHITE\_BACKGROUND@{WHITE\_BACKGROUND}}
+\index{WHITE\_BACKGROUND@{WHITE\_BACKGROUND}!wordle.h@{wordle.h}}
+\doxysubsubsection{\texorpdfstring{WHITE\_BACKGROUND}{WHITE\_BACKGROUND}}
+{\footnotesize\ttfamily const std\+::string WHITE\+\_\+\+BACKGROUND \{\char`\"{}\textbackslash{}033\mbox{[}0;37\char`\"{}\}}
+
+ANSI color coding to reset to white background. \mbox{\Hypertarget{wordle_8h_a8bc779337e61d3ab6ad13f81e102f327}\label{wordle_8h_a8bc779337e61d3ab6ad13f81e102f327}} 
+\index{wordle.h@{wordle.h}!YELLOW@{YELLOW}}
+\index{YELLOW@{YELLOW}!wordle.h@{wordle.h}}
+\doxysubsubsection{\texorpdfstring{YELLOW}{YELLOW}}
+{\footnotesize\ttfamily const std\+::string YELLOW \{\char`\"{}\textbackslash{}033\mbox{[}0;33;40m\char`\"{}\}}
+
+ANSI color coding for yellow text with black background. 

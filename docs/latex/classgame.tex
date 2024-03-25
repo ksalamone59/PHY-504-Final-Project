@@ -1,0 +1,78 @@
+\hypertarget{classgame}{}\doxysection{game Class Reference}
+\label{classgame}\index{game@{game}}
+
+
+{\ttfamily \#include $<$wordle.\+h$>$}
+
+
+
+Inheritance diagram for game\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{classgame__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgame_a08c5487f22881152e94cc41e05f57177}{get\+\_\+dictionary}} ()
+\item 
+void \mbox{\hyperlink{classgame_a9e2a116d255bd61dfb27f06bcc159962}{close\+\_\+dictionary}} ()
+\item 
+void \mbox{\hyperlink{classgame_a3140391458e0e2cefcacaca8bd50eb20}{initialize}} ()
+\item 
+void \mbox{\hyperlink{classgame_a956ac6a474727fb518b2fd85e34cd812}{set\+\_\+answer}} (const std\+::string ans)
+\item 
+\mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} \mbox{\hyperlink{classgame_ac9adbf30c599dbbcc19a130d7f63a29e}{play\+\_\+game}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the wordle game. Contains the logic for opening/closing the dictionary, getting a random word, setting the answer, and playing the game with color-\/coded I/O with the user. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_a9e2a116d255bd61dfb27f06bcc159962}\label{classgame_a9e2a116d255bd61dfb27f06bcc159962}} 
+\index{game@{game}!close\_dictionary@{close\_dictionary}}
+\index{close\_dictionary@{close\_dictionary}!game@{game}}
+\doxysubsubsection{\texorpdfstring{close\_dictionary()}{close\_dictionary()}}
+{\footnotesize\ttfamily void game\+::close\+\_\+dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closing the dictionary.\+txt file \mbox{\Hypertarget{classgame_a08c5487f22881152e94cc41e05f57177}\label{classgame_a08c5487f22881152e94cc41e05f57177}} 
+\index{game@{game}!get\_dictionary@{get\_dictionary}}
+\index{get\_dictionary@{get\_dictionary}!game@{game}}
+\doxysubsubsection{\texorpdfstring{get\_dictionary()}{get\_dictionary()}}
+{\footnotesize\ttfamily void game\+::get\+\_\+dictionary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Opening the dictionary.\+txt file \mbox{\Hypertarget{classgame_a3140391458e0e2cefcacaca8bd50eb20}\label{classgame_a3140391458e0e2cefcacaca8bd50eb20}} 
+\index{game@{game}!initialize@{initialize}}
+\index{initialize@{initialize}!game@{game}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void game\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initializing the Wordle game. Uses random number generator to get a random word from the dictionary.\+txt file, and then sets the answer \mbox{\Hypertarget{classgame_ac9adbf30c599dbbcc19a130d7f63a29e}\label{classgame_ac9adbf30c599dbbcc19a130d7f63a29e}} 
+\index{game@{game}!play\_game@{play\_game}}
+\index{play\_game@{play\_game}!game@{game}}
+\doxysubsubsection{\texorpdfstring{play\_game()}{play\_game()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} game\+::play\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Playing the game itself. Keeps track of properly placed letters (green), correct letters in the incorrect place (yellow) and incorrect letters (white). Allows 6 user gueses, forces all lowercase and 5 letters long (spaces do not count). \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} of the game. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgame_a956ac6a474727fb518b2fd85e34cd812}\label{classgame_a956ac6a474727fb518b2fd85e34cd812}} 
+\index{game@{game}!set\_answer@{set\_answer}}
+\index{set\_answer@{set\_answer}!game@{game}}
+\doxysubsubsection{\texorpdfstring{set\_answer()}{set\_answer()}}
+{\footnotesize\ttfamily void game\+::set\+\_\+answer (\begin{DoxyParamCaption}\item[{const std\+::string}]{ans }\end{DoxyParamCaption})}
+
+Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing 
+\begin{DoxyParams}{Parameters}
+{\em ans} & The answer to the current game of wordle. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{wordle_8h}{wordle.\+h}}\item 
+\mbox{\hyperlink{game_8cpp}{game.\+cpp}}\end{DoxyCompactItemize}
