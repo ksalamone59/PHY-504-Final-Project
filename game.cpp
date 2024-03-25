@@ -10,14 +10,13 @@ void game::initialize() //Get the current wordle guess
 {
     std::string rand_word;
     srand(time(NULL)); //Initialize random number generator
-    int rand_number{rand() % MAX_NUMBER}; //Random word from the list of words (recall: 0->1, 1->2, etc. See README)
+    int rand_number{(rand() % MAX_NUMBER)+1}; //Random word from the list of words (recall: 0->1, 1->2, etc. See README)
     int curr_word{0}; //To loop through dictionary file 
     get_dictionary(); //Get the dictionary
     while(dictionary.good()) //Continue looping through dictionary until we get line we want
     {
         getline(dictionary,rand_word);
-        if(curr_word == rand_number) break;
-        curr_word++;
+        if(curr_word++ == rand_number) break;
     }
     set_answer(rand_word); //Set the answer to the game
     close_dictionary(); //Close the dictionary
