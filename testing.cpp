@@ -12,7 +12,7 @@ int main()
     User.print_player_results();
     std::cout << "Game Statistics: \n" << User;
 
-    std::cout << RESET << "Second testing: \n"; //Again, see README for reccomended way to run arguments here
+    std::cout << RESET << "\nSecond testing: \n"; //Again, see README for reccomended way to run arguments here
     player User1;
     User1.set_answer("three");
     User1.set_solved_status(User1.play_game()); //This is testing the yellow letters, as well as what happens if you fail
