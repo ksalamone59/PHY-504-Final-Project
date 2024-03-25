@@ -1,5 +1,5 @@
 # PHY-504-Final-Project
-## Final Project for PHY 504: a Wordle Game**
+## Final Project for PHY 504: a Wordle Game
 
 This is the final project for PHY 504 by Kyle Salamone, in which I recreate the NYT hit game wordle through two class structures: the game itself, and the derived player class.
 
