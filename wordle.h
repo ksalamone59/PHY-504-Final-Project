@@ -26,8 +26,8 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
         void get_dictionary(); //Open ofstream object
         void close_dictionary(); //Close ofstream object
         void initialize(); //Gets the word for the game
-        results play_game(); //Actually plays the game. <0>> returns n_guess,  <1> returns if you solved correctly or not, <2> returns the answer
         void set_answer(const std::string ans); 
+        results play_game(); //Actually plays the game. <0> returns n_guess,  <1> returns if you solved correctly or not, <2> returns the answer
 };
 
 class player: public game //Class for the user to play the game through. Constructed this way so player can only access answer AFTER being given it by game class
