@@ -1,11 +1,22 @@
 //This file handles the actual "wordle" game itself
 #include "wordle.h"
 
+/**
+ * @file game.cpp
+ * @brief Defining object specific to class @ref game; actually playing the wordle game.
+*/
+
+/**
+ * Opening the dictionary.txt file
+*/
 void game::get_dictionary() //Open dictionary to read in from
 {
     dictionary.open("dictionary.txt");
 }
 
+/**
+ * Initializing the Wordle game. Uses random number generator to get a random word from the dictionary.txt file, and then sets the answer
+*/
 void game::initialize() //Get the current wordle guess
 {
     std::string rand_word;
@@ -22,11 +33,18 @@ void game::initialize() //Get the current wordle guess
     close_dictionary(); //Close the dictionary
 }
 
+/**
+ * Closing the dictionary.txt file
+*/
 void game::close_dictionary() //Close dictionary
 {
     dictionary.close();
 }
 
+/**
+ * Playing the game itself. Keeps track of properly placed letters (green), correct letters in the incorrect place (yellow) and incorrect letters (white). Allows 6 user gueses, forces all lowercase and 5 letters long (spaces do not count). 
+ * @return @ref results of the game.
+*/
 results game::play_game()
 {
     u_int n_guess = 0; //How many guesses it took
@@ -98,6 +116,10 @@ results game::play_game()
     return std::make_tuple(6,false,this->answer); //Return failed status with 6 guesses
 }
 
+/**
+ * Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing
+ * @param ans The answer to the current game of wordle.
+*/
 void game::set_answer(const std::string ans) //Set the answer to the game. Used in unit testing more forcefully as well
 {
     this->answer = ans;

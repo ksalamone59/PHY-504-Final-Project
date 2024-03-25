@@ -1,6 +1,14 @@
 //File for unit testing; contains only function relevant to unit testing. Run with ./test after running make
 #include "wordle.h"
 
+/**
+ * @file testing.cpp
+ * @brief File and main function for Unit Testing only. This is done by forcing the input as "three", and then seeing both 1) if we get the question correct and 2) what happens if we get it wrong in different ways?
+*/
+
+/**
+ * Performing Unit Testing. See @ref md_README for more information
+*/
 int main()
 {
     player User; //Instatiating a player, and initializing the game 
