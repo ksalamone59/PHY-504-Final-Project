@@ -3,7 +3,7 @@
 
 This is the final project for PHY 504 by Kyle Salamone, in which I recreate the NYT hit game wordle through two class structures: the game itself, and the derived player class.
 
-The Doxygen page is located at: https://ksalamone59.github.io/PHY-504-Final-Project/. 
+The GitHub Pages page is located at: https://ksalamone59.github.io/PHY-504-Final-Project/. 
 
 dictionary.txt: contains all valid wordle words; thanks to user Dracos/this git repo: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93 
 
@@ -43,9 +43,9 @@ GNUmakefile: make file to assist with using multiple files, and helps with unit 
 
 The Unit Testing for this repository will be just giving the game with certain arguments. Example: I am forcing the word to be "three", so therefore if we instantize the game and instantly give "Three", we should get back true and that n_guess = 1 (which I will assert). As well, if we give a list of strings for the user to input in a row, they can ensure the coloring is proper and failed results work. I.e. if we force "three" again as the true result: if we start with "eeemm" (we don't care if the inputs are actual words, as per the problem statement) the first two "e" should be yellow, the third white and the two "m" white. Then if we go with "tteeh" the first "t" will be green, second will be white, first "e" yellow, second green and the "h" will be yellow. Then in order you can go: "aaaaa" for all white, "threw" for all green besdies the w, "hhhhh" for one green in the second spot and, finally, "rrrrr" for one green in the third spot, along with the failed results. These are all testing that the wordle function is behaving as expected and properly; since it requires user input the user can feel free to do their own unit testing on the word "three" as well, beyond what I have given (while of course, understanding the rules of wordle). Run "./test" after calling "make" to test. So, in nicer bullets: 
 
-- **FIRST TEST:**
+- **FIRST TEST :**
   - Input "three" right away
-- **SECOND TEST:** input, for visuals:
+- **SECOND TEST :** input, for visuals:
   - "eeemm"
   - "tteeh"
   - "aaaaa"
