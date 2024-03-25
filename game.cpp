@@ -10,8 +10,7 @@ void game::initialize() //Get the current wordle guess
 {
     std::string rand_word;
     srand(time(NULL)); //Initialize random number generator
-    int rand_number{rand() % 14855}; //Random word from the list of 10923 words (recall: 0->1, 1->2, etc. See README)
-    assert(rand_number < MAX_NUMBER);
+    int rand_number{rand() % MAX_NUMBER}; //Random word from the list of words (recall: 0->1, 1->2, etc. See README)
     int curr_word{0}; //To loop through dictionary file 
     get_dictionary(); //Get the dictionary
     while(dictionary.good()) //Continue looping through dictionary until we get line we want
@@ -29,7 +28,7 @@ void game::close_dictionary() //Close dictionary
     dictionary.close();
 }
 
-std::tuple<int,bool,std::string> game::play_game()
+results game::play_game()
 {
     u_int n_guess = 0; //How many guesses it took
     std::string out_names[6] = {"first","second","third","fourth","fifth","sixth and final"}; //Making I/O easier
@@ -43,10 +42,17 @@ std::tuple<int,bool,std::string> game::play_game()
             std::cout << "Oops! You need a five letter word to play the game. Please re enter a 5 letter word: ";
             std::cin >> input;
         }
+        for(auto &c: input) //Ensure that all inputs are lowercase
+        {
+            if(isupper(c)) //This checks if c is uppercase, and then forces it to be lowercase
+            {
+                c += 32; //This converts the character from upper to lower case. See README for documentation
+            }
+        }
+        n_guess++;
         if(input == answer) //Guess is fully correct
         {
             std::cout << GREEN << input << RESET << std::endl; //Print out word in green
-            std::cout << "Well done!\n";
             return std::make_tuple(n_guess,true,this->answer); //Return successful guess with n_guess guesses
         }
         bool good_input[5] = {false}; //See if current entry is already accounted for 
@@ -88,7 +94,6 @@ std::tuple<int,bool,std::string> game::play_game()
             }
         }
         std::cout << std::endl;
-        n_guess++; //Incriment and continue
     }
     return std::make_tuple(6,false,this->answer); //Return failed status with 6 guesses
 }

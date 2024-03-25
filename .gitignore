@@ -1,0 +1,4 @@
+wordle 
+*.o
+.vscode
+test
