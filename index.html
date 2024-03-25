@@ -12,15 +12,12 @@
 
 <ul>
     <li><p><tt>wordle.h</tt> provides header definitions for various aliased types, the class for the game, the derived class for the player, the ASCI color codings and the include files.</p></li>
-    <ul>
-        <li><p>Setting <tt>results = std::tuple<u_int,bool,std::string></tt> is mostly a quality of life change, to make my life easier in calling this data structure.</p></li>
-        <li>The various <tt>const std::string</tt> objects are just defining the ASCI color codings for the text, so the game has the best coloring and UI possible.</li>
-    </ul>
     <li><p><tt>wordle.cpp</tt> contains the main function to start and play the game by instantizing a "player" who can access the game start/play functions, as well as output the results of the game. This is what will be called in main(); descriptions of the various classes can be found below.</p></li>
     <li><p><tt>game.cpp</tt> contains the class definitions for the class "game". For the "game" class: </p></li>
     <li><p><tt>player.cpp</tt> contains the class definitions for the derived class "player".</p></li>
+    <li><p><tt>testing.cpp</tt> contains the main function to perform unit testing. </p></li>
     <li><p><tt>dictionary.txt</tt></p> contains the list of valid wordle words, credited in README. </li>
-    <li><a href="html/index.html">Doxygen documentation</a></li>
+    <li><a href="docs/html/index.html">Doxygen documentation</a></li>
 </ul>
 
 </body>
