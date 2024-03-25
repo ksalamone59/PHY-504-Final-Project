@@ -37,7 +37,7 @@ std::string player::get_answer()
 
 std::ostream &operator<< (std::ostream &os, const player &User) //Operator to print out information of the game
 {
-    os << "Number of Guesses: " << User.n_guess << ". Was the Wordle solved? " << (User.properly_solved ? "Yes":"No") << ". The real answer was: " << User.true_result << std::endl;
+    os << "Number of Guesses: " << User.n_guess << ". Was the Wordle solved? " << (User.properly_solved ? "Yes":"No") << ". The real answer was: " << User.true_result << WHITE_BACKGROUND << std::endl;
     return os;
 }
 

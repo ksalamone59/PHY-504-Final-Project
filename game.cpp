@@ -32,6 +32,7 @@ results game::play_game()
 {
     u_int n_guess = 0; //How many guesses it took
     std::string out_names[6] = {"first","second","third","fourth","fifth","sixth and final"}; //Making I/O easier
+    std::cout << RESET << std::endl; //Easiet way to force background text styles to be the same regardless of editor/terminal themes
     while(n_guess < MAX_N_GUESS) //Only 6 guesses
     {
         std::string input;

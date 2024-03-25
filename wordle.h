@@ -11,6 +11,10 @@
 #include <time.h> //to initialize rand time
 
 using results = std::tuple<int,bool,std::string>; //Easier to write; results of the game
+const std::string YELLOW{"\033[0;33;40m"}; //ANSI color codings for yellow, green and white (RESET) with black backgrounds. See README for reference
+const std::string GREEN{"\033[0;32;40m"};
+const std::string RESET{"\033[0;37;40m"};
+const std::string WHITE_BACKGROUND{"\033[0;37"};
 
 class game //Didn't need constructor, since everything is hard coded/uses RNG (and since player initializes the rng/game)
 {
@@ -19,9 +23,6 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
         std::ifstream dictionary; //Input file
         const int MAX_NUMBER{14855}; //Number of words in dictionary.txt. See README for crediting
         const u_int MAX_N_GUESS{6}; //Max number of wordle guesses
-        const std::string YELLOW{"\e[0;33m"}; //ANSI color codings for yellow, green and white (RESET). See README for reference
-        const std::string GREEN{"\e[0;32m"};
-        const std::string RESET{"\e[0;37m"};
     public: 
         void get_dictionary(); //Open ofstream object
         void close_dictionary(); //Close ofstream object
