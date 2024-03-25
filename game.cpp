@@ -19,7 +19,7 @@ void game::initialize() //Get the current wordle guess
         if(curr_word == rand_number) break;
         curr_word++;
     }
-    this->answer = rand_word; //Set the answer to the game
+    set_answer(rand_word); //Set the answer to the game
     close_dictionary(); //Close the dictionary
 }
 
@@ -96,4 +96,9 @@ results game::play_game()
         std::cout << std::endl;
     }
     return std::make_tuple(6,false,this->answer); //Return failed status with 6 guesses
+}
+
+void game::set_answer(const std::string ans) //Set the answer to the game. Used in unit testing more forcefully as well
+{
+    this->answer = ans;
 }
