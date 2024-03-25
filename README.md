@@ -1,17 +1,27 @@
 # PHY-504-Final-Project
 **Final Project for PHY 504: a Wordle Game**
 
+This is the final project for PHY 504 by Kyle Salamone, in which I recreate the NYT hit game wordle through two class structures: the game itself, and the derived player class.
+
 dictionary.txt: contains all valid wordle words; thanks to user Dracos/this git repo: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93 
 
 In reading in from this file, since it starts at line 1, we will say that the nth word in the random number generator is the (n+1)st word in the dictionary (random number = 0, word = 1)
 
 For the random number generator: https://cplusplus.com/reference/cstdlib/rand/
 
-ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a 
+ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 https://cplusplus.com/forum/beginner/7303/
 
 This code makes use of tuples of length 3; this was done by using https://en.cppreference.com/w/cpp/utility/tuple
 
-To run the code: run "make" and then "./wordle" (or make && ./wordle). NOTE: inputs must be 5 letter, lowercase words. There are checks in place to ensure that this is maintained. Reference for the isupper() and converting upper to lower case: https://www.programiz.com/cpp-programming/library-function/cctype/isupper
+**DESCRIPTION OF THE CODE**
+
+The code is commented fairly well, but to go over it briefly here: the class __game__ holds the actual declarations and variables needed for the worlde game: calling the dictionary and closing it, getting a random word from the dictionary, handling the I/O with the user while playing the game, storing the answer, and then communicating the results of the game to the player afterwards. The derived __player__ class (child class of game) in turn simply handles the player itself: from outputting the results of the game, to initializing the game upon the creation of a player. 
+
+**RUNNING THE CODE**
+
+Running "make" in this directory/repo will create two exectuables: wordle and test (ran respectively as ./wordle and ./test). Wordle is to play the game completely normally, without any concerns for unit testing. Test is handling the unit testing, see **UNIT TESTING** below. 
+
+The code is designed similarly to the NYT wordle game: the correct letter in the right spot colors green, the correct letter in the wrong spot colors yellow, and an incorrect letter (not in the final results at all) colors white (I force a black background as well; I run dark mode on my terminal so I didn't think about that). 
 
 **DESCRIPTION OF FILES:**
 
