@@ -1,6 +1,8 @@
 # PHY-504-Final-Project
 **Final Project for PHY 504: a Wordle Game**
 
+This is the final project for PHY 504 by Kyle Salamone, in which I recreate the NYT hit game wordle through two class structures: the game itself, and the derived player class.
+
 dictionary.txt: contains all valid wordle words; thanks to user Dracos/this git repo: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93 
 
 In reading in from this file, since it starts at line 1, we will say that the nth word in the random number generator is the (n+1)st word in the dictionary (random number = 0, word = 1)
@@ -10,6 +12,10 @@ For the random number generator: https://cplusplus.com/reference/cstdlib/rand/
 ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a 
 
 This code makes use of tuples of length 3; this was done by using https://en.cppreference.com/w/cpp/utility/tuple
+
+**DESCRIPTION OF THE CODE**
+
+The code is commented fairly well, but to go over it briefly here: the class __game__ holds the actual declarations and variables needed for the worlde game: calling the dictionary and closing it, getting a random word from the dictionary, handling the I/O with the user while playing the game, storing the answer, and then communicating the results of the game to the player afterwards. The derived __player__ class (child class of game) in turn simply handles the player itself: from outputting the results of the game, to initializing the game upon the creation of a player. 
 
 **RUNNING THE CODE**
 
