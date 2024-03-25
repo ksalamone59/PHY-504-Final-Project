@@ -11,7 +11,11 @@ ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79
 
 This code makes use of tuples of length 3; this was done by using https://en.cppreference.com/w/cpp/utility/tuple
 
-To run the code: run "make" and then "./wordle" (or make && ./wordle). NOTE: inputs must be 5 letter, lowercase words. There are checks in place to ensure that this is maintained. Reference for the isupper() and converting upper to lower case: https://www.programiz.com/cpp-programming/library-function/cctype/isupper
+**RUNNING THE CODE**
+
+Running "make" in this directory/repo will create two exectuables: wordle and test (ran respectively as ./wordle and ./test). Wordle is to play the game completely normally, without any concerns for unit testing. Test is handling the unit testing, see **UNIT TESTING** below. 
+
+The code is designed similarly to the NYT wordle game: the correct letter in the right spot colors green, the correct letter in the wrong spot colors yellow, and an incorrect letter (not in the final results at all) colors white (I force a black background as well; I run dark mode on my terminal so I didn't think about that). 
 
 **DESCRIPTION OF FILES:**
 
