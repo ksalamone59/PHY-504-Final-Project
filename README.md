@@ -3,7 +3,7 @@
 
 This is the final project for PHY 504 by Kyle Salamone, in which I recreate the NYT hit game wordle through two class structures: the game itself, and the derived player class.
 
-The Doxygen page is located at: https://ksalamone59.github.io/PHY-504-Final-Project/. 
+The GitHub Pages page is located at: https://ksalamone59.github.io/PHY-504-Final-Project/. 
 
 dictionary.txt: contains all valid wordle words; thanks to user Dracos/this git repo: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93 
 
