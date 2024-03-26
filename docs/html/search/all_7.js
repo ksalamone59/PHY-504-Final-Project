@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['set_5fanswer_18',['set_answer',['../classgame.html#a956ac6a474727fb518b2fd85e34cd812',1,'game']]],
-  ['set_5fsolved_5fstatus_19',['set_solved_status',['../classplayer.html#ae399db61e97f5ee18dad7b4f5f845247',1,'player']]]
+  ['reset_17',['RESET',['../wordle_8h.html#a2f0a977841de68d04e86bc84c57c3ff3',1,'wordle.h']]],
+  ['results_18',['results',['../wordle_8h.html#a062d4df9a098e840075de669fbd5fa7e',1,'wordle.h']]]
 ];

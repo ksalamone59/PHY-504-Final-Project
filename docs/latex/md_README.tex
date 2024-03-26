@@ -1,7 +1,7 @@
 \hypertarget{md_README_autotoc_md1}{}\doxysection{Final Project for PHY 504\+: a Wordle Game}\label{md_README_autotoc_md1}
 This is the final project for PHY 504 by Kyle Salamone, in which I recreate the NYT hit game wordle through two class structures\+: the game itself, and the derived player class.
 
-The Doxygen page is located at\+: \href{https://ksalamone59.github.io/PHY-504-Final-Project/}{\texttt{ https\+://ksalamone59.\+github.\+io/\+PHY-\/504-\/\+Final-\/\+Project/}}.
+The Git\+Hub Pages page is located at\+: \href{https://ksalamone59.github.io/PHY-504-Final-Project/}{\texttt{ https\+://ksalamone59.\+github.\+io/\+PHY-\/504-\/\+Final-\/\+Project/}}.
 
 dictionary.\+txt\+: contains all valid wordle words; thanks to user Dracos/this git repo\+: \href{https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93}{\texttt{ https\+://gist.\+github.\+com/dracos/dd0668f281e685bad51479e5acaadb93}}
 
@@ -26,16 +26,19 @@ dictionary.\+txt\+: A long list, credited above, of 5 letter wordle accepted let
 
 \mbox{\hyperlink{player_8cpp}{player.\+cpp}}\+: The file for the \char`\"{}player\char`\"{} class specific functions. Mostly setting the private variables like the number of guesses it took, the status if we passed or failed the game, and the true answer. Prints all of this information out.
 
-GNUmakefile\+: make file to assist with using multiple files, and helps with unit testing.\hypertarget{md_README_autotoc_md5}{}\doxysection{UNIT TESTING}\label{md_README_autotoc_md5}
+GNUmakefile\+: make file to assist with using multiple files, and helps with unit testing.
+
+Doxyfile\+: Doxygen file. See \char`\"{}\+DOXYGEN DOCUMENTATION\char`\"{} for more.\hypertarget{md_README_autotoc_md5}{}\doxysection{DOXYGEN DOCUMENTATION}\label{md_README_autotoc_md5}
+Makes use of Doxygen to create documentation hub. Upon calling \char`\"{}doxyen Doxyfile\char`\"{} will create directory \char`\"{}docs\char`\"{}. Go to docs/html, and observe the .html files from there (or call google-\/chrome on it, etc.).\hypertarget{md_README_autotoc_md6}{}\doxysection{UNIT TESTING}\label{md_README_autotoc_md6}
 The Unit Testing for this repository will be just giving the game with certain arguments. Example\+: I am forcing the word to be \char`\"{}three\char`\"{}, so therefore if we instantize the game and instantly give \char`\"{}\+Three\char`\"{}, we should get back true and that n\+\_\+guess = 1 (which I will assert). As well, if we give a list of strings for the user to input in a row, they can ensure the coloring is proper and failed results work. I.\+e. if we force \char`\"{}three\char`\"{} again as the true result\+: if we start with \char`\"{}eeemm\char`\"{} (we don\textquotesingle{}t care if the inputs are actual words, as per the problem statement) the first two \char`\"{}e\char`\"{} should be yellow, the third white and the two \char`\"{}m\char`\"{} white. Then if we go with \char`\"{}tteeh\char`\"{} the first \char`\"{}t\char`\"{} will be green, second will be white, first \char`\"{}e\char`\"{} yellow, second green and the \char`\"{}h\char`\"{} will be yellow. Then in order you can go\+: \char`\"{}aaaaa\char`\"{} for all white, \char`\"{}threw\char`\"{} for all green besdies the w, \char`\"{}hhhhh\char`\"{} for one green in the second spot and, finally, \char`\"{}rrrrr\char`\"{} for one green in the third spot, along with the failed results. These are all testing that the wordle function is behaving as expected and properly; since it requires user input the user can feel free to do their own unit testing on the word \char`\"{}three\char`\"{} as well, beyond what I have given (while of course, understanding the rules of wordle). Run \char`\"{}./test\char`\"{} after calling \char`\"{}make\char`\"{} to test. So, in nicer bullets\+:
 
 
 \begin{DoxyItemize}
-\item {\bfseries{FIRST TEST\+:}}
+\item {\bfseries{FIRST TEST \+:}}
 \begin{DoxyItemize}
 \item Input \char`\"{}three\char`\"{} right away
 \end{DoxyItemize}
-\item {\bfseries{SECOND TEST\+:}} input, for visuals\+:
+\item {\bfseries{SECOND TEST \+:}} input, for visuals\+:
 \begin{DoxyItemize}
 \item \char`\"{}eeemm\char`\"{}
 \item \char`\"{}tteeh\char`\"{}

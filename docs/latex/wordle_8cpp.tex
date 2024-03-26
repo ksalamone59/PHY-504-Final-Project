@@ -13,14 +13,37 @@ Include dependency graph for wordle.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{wordle_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wordle_8cpp_afb523ded30d4676e93528a3d4dc8658a}{DO\+\_\+\+UNIT\+\_\+\+TEST}}~0
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{wordle_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{wordle_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
-int {\bfseries main} ()
+int \mbox{\hyperlink{wordle_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Calling the wordle game to be played with the user input. 
 
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wordle_8cpp_afb523ded30d4676e93528a3d4dc8658a}\label{wordle_8cpp_afb523ded30d4676e93528a3d4dc8658a}} 
+\index{wordle.cpp@{wordle.cpp}!DO\_UNIT\_TEST@{DO\_UNIT\_TEST}}
+\index{DO\_UNIT\_TEST@{DO\_UNIT\_TEST}!wordle.cpp@{wordle.cpp}}
+\doxysubsubsection{\texorpdfstring{DO\_UNIT\_TEST}{DO\_UNIT\_TEST}}
+{\footnotesize\ttfamily \#define DO\+\_\+\+UNIT\+\_\+\+TEST~0}
+
+Using CMAKE to automate unit testing. This is done by specifying \char`\"{}make CFLAGS=\char`\"{}-\/DUNIT\+\_\+\+TEST\char`\"{}\char`\"{} Make sure to run \char`\"{}make clean\char`\"{} in between running in unit test and regular mode 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wordle_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{wordle_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{wordle.cpp@{wordle.cpp}!main@{main}}
+\index{main@{main}!wordle.cpp@{wordle.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+UNIT TESTING \+: doing unit testing for a) getting the answer right and b) getting it wrong in various ways. See README and other documentation for detailed instructions how to run

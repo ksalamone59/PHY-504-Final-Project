@@ -1,7 +1,6 @@
 <map id="wordle.h" name="wordle.h">
-<area shape="rect" id="node1" title="Header file containing includes, global variables, and forward declarations for class game and player..." alt="" coords="179,5,257,32"/>
+<area shape="rect" id="node1" title="Header file containing includes, global variables, and forward declarations for class game and player..." alt="" coords="121,5,200,32"/>
 <area shape="rect" id="node2" href="$game_8cpp.html" title="Defining object specific to class game; actually playing the wordle game." alt="" coords="5,80,92,107"/>
 <area shape="rect" id="node3" href="$player_8cpp.html" title="Defining object specific to class player." alt="" coords="116,80,205,107"/>
-<area shape="rect" id="node4" href="$testing_8cpp.html" title="File and main function for Unit Testing only. This is done by forcing the input as &quot;three&quot;,..." alt="" coords="229,80,324,107"/>
-<area shape="rect" id="node5" href="$wordle_8cpp.html" title="Calling the wordle game to be played with the user input." alt="" coords="349,80,442,107"/>
+<area shape="rect" id="node4" href="$wordle_8cpp.html" title="Calling the wordle game to be played with the user input." alt="" coords="230,80,323,107"/>
 </map>

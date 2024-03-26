@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "cgimoprstwy~",
+  0: "cdgimoprswy~",
   1: "gp",
-  2: "gptw",
+  2: "gpw",
   3: "cgimops~",
   4: "grwy",
   5: "r",
   6: "o",
-  7: "p"
+  7: "d",
+  8: "p"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "typedefs",
   6: "related",
-  7: "pages"
+  7: "defines",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "Variables",
   5: "Typedefs",
   6: "Friends",
-  7: "Pages"
+  7: "Macros",
+  8: "Pages"
 };
 

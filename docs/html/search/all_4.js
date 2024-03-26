@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['operator_3c_3c_10',['operator&lt;&lt;',['../classplayer.html#af77a4e5a2fba9b3a40009cbbe5f5a027',1,'player::operator&lt;&lt;()'],['../player_8cpp.html#af77a4e5a2fba9b3a40009cbbe5f5a027',1,'operator&lt;&lt;():&#160;player.cpp']]]
+  ['main_10',['main',['../wordle_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'wordle.cpp']]]
 ];
