@@ -21,7 +21,7 @@ The code is commented fairly well, but to go over it briefly here: the class __g
 
 # RUNNING THE CODE
 
-Running "make" in this directory/repo will create two exectuables: wordle and test (ran respectively as ./wordle and ./test). Wordle is to play the game completely normally, without any concerns for unit testing. Test is handling the unit testing, see **UNIT TESTING** below. 
+To run unit testing, see the **UNIT TESTING** section below. To run the main code, clone this repo and then run make, and then ./wordle. In one line (using make clean to ensure we can switch between unit testing and run mode at will): ````make clean && make && ./wordle````.
 
 The code is designed similarly to the NYT wordle game: the correct letter in the right spot colors green, the correct letter in the wrong spot colors yellow, and an incorrect letter (not in the final results at all) colors white (I force a black background as well; I run dark mode on my terminal so I didn't think about that). 
 
@@ -51,11 +51,7 @@ The Unit Testing for this repository will be just giving the game with certain a
 
 ## RUNNING UNIT TESTING 
 
-To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In one liners... 
-- Normal running mode: ````make clean && make && ./wordle````
-- Unit Test running mode: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````
-  
-Follow these instructions below to perform the testing:
+To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In a one liner: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````. Follow these instructions below to perform the testing:
 
 - **FIRST TEST :**
   - Input "three" right away
