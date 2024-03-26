@@ -1,19 +1,15 @@
-ALL: wordle test
+ALL: wordle
 
 SOURCES := wordle.cpp player.cpp game.cpp #3 cpp files; NON UNIT TESTING
 HEADERS := wordle.h #Only 1 header
-SOURCES_test := testing.cpp player.cpp game.cpp 
+SOURCES_test := player.cpp game.cpp 
 
 OBJECTS := $(SOURCES:.cpp=.o)
 %.o : %.cpp ${HEADERS}
-	g++ -c $<
+	g++ -c $< $(CFLAGS)
 
 wordle: ${OBJECTS}
-	g++ -o $@ ${OBJECTS}
+	g++ -o $@ ${OBJECTS} $(LDFLAGS)
 
-OBJECTS_test := $(SOURCES_test:.cpp=.o)
-%.o : %.cpp ${HEADERS}
-	g++ -c $<
-
-test: ${OBJECTS_test}
-	g++ -o $@ ${OBJECTS_test}
+clean:
+	rm -f *.o wordle
