@@ -5,6 +5,8 @@ This is the final project for PHY 504 by Kyle Salamone, in which I recreate the 
 
 The GitHub Pages page is located at: https://ksalamone59.github.io/PHY-504-Final-Project/. 
 
+## References/Examples
+
 dictionary.txt: contains all valid wordle words; thanks to user Dracos/this git repo: https://gist.github.com/dracos/dd0668f281e685bad51479e5acaadb93 
 
 In reading in from this file, since it starts at line 1, we will say that the nth word in the random number generator is the (n+1)st word in the dictionary (random number = 0, word = 1)
@@ -14,6 +16,8 @@ For the random number generator: https://cplusplus.com/reference/cstdlib/rand/
 ANSI color coding help: https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 https://cplusplus.com/forum/beginner/7303/
 
 This code makes use of tuples of length 3; this was done by using https://en.cppreference.com/w/cpp/utility/tuple
+
+For the style of debugging I chose in my GNUmakefile: I took heavy inspiration from https://stackoverflow.com/questions/50329451/ifdef-and-conditional-compilation-with-makefile, https://stackoverflow.com/questions/13249610/how-to-use-ldflags-in-makefile and the PHY 504 OpenMP file notes. 
 
 # DESCRIPTION OF THE CODE
 
