@@ -1,6 +1,6 @@
 ALL: wordle
 
-SOURCES := wordle.cpp player.cpp game.cpp #3 cpp files; NON UNIT TESTING
+SOURCES := $(wildcard *.cpp)
 HEADERS := wordle.h #Only 1 header
 SOURCES_test := player.cpp game.cpp 
 
