@@ -1305,7 +1305,6 @@ bises
 bisks
 bisom
 bison
-bitch
 biter
 bites
 bitey
@@ -2769,7 +2768,6 @@ cundy
 cunei
 cunit
 cunny
-cunts
 cupel
 cupid
 cuppa
@@ -4474,7 +4472,6 @@ fryer
 fubar
 fubby
 fubsy
-fucks
 fucus
 fuddy
 fudge
@@ -10342,10 +10339,6 @@ ranny
 ranse
 rants
 ranty
-raped
-rapee
-raper
-rapes
 raphe
 rapid
 rapin
@@ -11553,7 +11546,6 @@ shish
 shiso
 shist
 shite
-shits
 shiur
 shiva
 shive

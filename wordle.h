@@ -14,6 +14,7 @@
 #include <fstream> //for ifstream 
 #include <stdlib.h> //for srand() and coloring text
 #include <time.h> //to initialize rand time
+#include <ctype.h> //for isalpha()
 
 /**
  * Alias for std::tuple<int,bool,std::string> to hold the...<number_guesses, properly_solved_game (True for yes, False for no), true answer>
@@ -53,7 +54,7 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
         /**
          * Number of words in dictionary.txt. See README for crediting
         */
-        const int MAX_NUMBER{14855};
+        const int MAX_NUMBER{14847};
         /**
          * Max number of wordle guesses*/ 
         const u_int MAX_N_GUESS{6}; 

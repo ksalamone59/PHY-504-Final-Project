@@ -21,7 +21,7 @@ void game::initialize() //Get the current wordle guess
 {
     std::string rand_word;
     srand(time(NULL)); //Initialize random number generator
-    int rand_number{(rand() % MAX_NUMBER)+1}; //Random word from the list of words (recall: 0->1, 1->2, etc. See README)
+    int rand_number{rand() % (MAX_NUMBER+1)}; //Random word from the list of words (recall: 0->1, 1->2, etc. See README)
     int curr_word{0}; //To loop through dictionary file 
     get_dictionary(); //Get the dictionary
     while(dictionary.good()) //Continue looping through dictionary until we get line we want
@@ -59,6 +59,22 @@ results game::play_game()
         {
             std::cout << "Oops! You need a five letter word to play the game. Please re enter a 5 letter word: ";
             std::cin >> input;
+        }
+        bool good_word = false;
+        while(!good_word) //Ensuring that all inputs are in the standard alphabet
+        {
+            int n_good = 0;
+            for(const auto &c: input)
+            {
+                if(!isalpha(c))
+                {
+                    std::cout << "Oops! All characters must be in the alphabet. Character " << c << " is not allowed. Please re enter a 5 letter word, totally in the alphabet: ";
+                    std::cin >> input;
+                    break;
+                }
+                else n_good++;
+            }
+            if(n_good == 5) good_word = true;
         }
         for(auto &c: input) //Ensure that all inputs are lowercase
         {
@@ -117,7 +133,7 @@ results game::play_game()
 }
 
 /**
- * Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing
+ * Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing more forcefully.
  * @param ans The answer to the current game of wordle.
 */
 void game::set_answer(const std::string ans) //Set the answer to the game. Used in unit testing more forcefully as well
