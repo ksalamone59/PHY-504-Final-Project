@@ -19,6 +19,8 @@ This code makes use of tuples of length 3; this was done by using https://en.cpp
 
 For the style of debugging I chose in my GNUmakefile: I took heavy inspiration from https://stackoverflow.com/questions/50329451/ifdef-and-conditional-compilation-with-makefile, https://stackoverflow.com/questions/13249610/how-to-use-ldflags-in-makefile and the PHY 504 OpenMP file notes. 
 
+For sstream stuff: googled all over the place, found useful help in these few pages: https://www.reddit.com/r/cpp_questions/comments/smj7et/how_to_pass_variables_to_cin_standard_input/ https://www.geeksforgeeks.org/processing-strings-using-stdistringstream/ https://en.cppreference.com/w/cpp/io/basic_istringstream . I figured out the "\n"/newline stuff to simulate multiple user inputs in a row through testing.
+
 # DESCRIPTION OF THE CODE
 
 The code is commented fairly well, but to go over it briefly here: the class __game__ holds the actual declarations and variables needed for the worlde game: calling the dictionary and closing it, getting a random word from the dictionary, handling the I/O with the user while playing the game, storing the answer, and then communicating the results of the game to the player afterwards. The derived __player__ class (child class of game) in turn simply handles the player itself: from outputting the results of the game, to initializing the game upon the creation of a player. 
@@ -55,7 +57,7 @@ The Unit Testing for this repository will be just giving the game with certain a
 
 ## RUNNING UNIT TESTING 
 
-To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In a one liner: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````. Follow these instructions below to perform the testing:
+To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In a one liner: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````. The testing is done in two stages, described below (and above in more detail):
 
 - **FIRST TEST :**
   - Input "three" right away
