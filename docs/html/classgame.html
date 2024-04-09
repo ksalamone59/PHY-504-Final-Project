@@ -90,12 +90,39 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3140391458e0e2cefcacaca8bd50eb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a956ac6a474727fb518b2fd85e34cd812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a956ac6a474727fb518b2fd85e34cd812">set_answer</a> (const std::string ans)</td></tr>
 <tr class="separator:a956ac6a474727fb518b2fd85e34cd812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a121ca37087749cdb07d43c99c8329521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a121ca37087749cdb07d43c99c8329521">check_spaces</a> (std::string &amp;input)</td></tr>
+<tr class="separator:a121ca37087749cdb07d43c99c8329521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9adbf30c599dbbcc19a130d7f63a29e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wordle_8h.html#a062d4df9a098e840075de669fbd5fa7e">results</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ac9adbf30c599dbbcc19a130d7f63a29e">play_game</a> ()</td></tr>
 <tr class="separator:ac9adbf30c599dbbcc19a130d7f63a29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main class for the wordle game. Contains the logic for opening/closing the dictionary, getting a random word, setting the answer, and playing the game with color-coded I/O with the user. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a121ca37087749cdb07d43c99c8329521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a121ca37087749cdb07d43c99c8329521">&#9670;&nbsp;</a></span>check_spaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game::check_spaces </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checking if input has any spaces; done this way as it's called multiple times </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>user input necessary from wordle game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>input without spaces </dd></dl>
+
+</div>
+</div>
 <a id="a9e2a116d255bd61dfb27f06bcc159962"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e2a116d255bd61dfb27f06bcc159962">&#9670;&nbsp;</a></span>close_dictionary()</h2>
 
@@ -183,7 +210,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing more forcefully. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ans</td><td>The answer to the current game of wordle. </td></tr>
   </table>

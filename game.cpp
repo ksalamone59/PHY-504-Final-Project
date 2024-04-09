@@ -42,6 +42,22 @@ void game::close_dictionary() //Close dictionary
 }
 
 /**
+ * Checking if input has any spaces; done this way as it's called multiple times
+ * @param input user input necessary from wordle game
+ * @return input without spaces
+*/
+void game::check_spaces(std::string &input)
+{
+    for(int i=0;i<input.length();i++) //Gets rid of any spaces
+    {
+        if(isspace(input[i]))
+        {
+            input.erase(input.begin()+i);
+        }
+    }
+}
+
+/**
  * Playing the game itself. Keeps track of properly placed letters (green), correct letters in the incorrect place (yellow) and incorrect letters (white). Allows 6 user gueses, forces all lowercase and 5 letters long (spaces do not count). 
  * @return @ref results of the game.
 */
@@ -54,11 +70,14 @@ results game::play_game()
     {
         std::string input;
         std::cout << "Please enter your " << out_names[n_guess] << " guess: ";
-        std::cin >> input;
+        std::getline(std::cin,input);
+        check_spaces(input);
         while(input.length() != 5) //Testing to ensure we get 5 letter words only
         {
             std::cout << "Oops! You need a five letter word to play the game. Please re enter a 5 letter word: ";
-            std::cin >> input;
+            std::getline(std::cin,input);
+            check_spaces(input);
+            std::cout << input.length() << " " << input << std::endl;
         }
         bool good_word = false;
         while(!good_word) //Ensuring that all inputs are in the standard alphabet
@@ -70,6 +89,7 @@ results game::play_game()
                 {
                     std::cout << "Oops! All characters must be in the alphabet. Character " << c << " is not allowed. Please re enter a 5 letter word, totally in the alphabet: ";
                     std::cin >> input;
+                    check_spaces(input);
                     break;
                 }
                 else n_good++;
@@ -136,7 +156,7 @@ results game::play_game()
  * Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing more forcefully.
  * @param ans The answer to the current game of wordle.
 */
-void game::set_answer(const std::string ans) //Set the answer to the game. Used in unit testing more forcefully as well
+void game::set_answer(const std::string &ans) //Set the answer to the game. Used in unit testing more forcefully as well
 {
     this->answer = ans;
 }

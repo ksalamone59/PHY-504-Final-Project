@@ -24,6 +24,8 @@ void \mbox{\hyperlink{classgame_a3140391458e0e2cefcacaca8bd50eb20}{initialize}} 
 \item 
 void \mbox{\hyperlink{classgame_a956ac6a474727fb518b2fd85e34cd812}{set\+\_\+answer}} (const std\+::string ans)
 \item 
+void \mbox{\hyperlink{classgame_a121ca37087749cdb07d43c99c8329521}{check\+\_\+spaces}} (std\+::string \&input)
+\item 
 \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} \mbox{\hyperlink{classgame_ac9adbf30c599dbbcc19a130d7f63a29e}{play\+\_\+game}} ()
 \end{DoxyCompactItemize}
 
@@ -32,6 +34,20 @@ void \mbox{\hyperlink{classgame_a956ac6a474727fb518b2fd85e34cd812}{set\+\_\+answ
 The main class for the wordle game. Contains the logic for opening/closing the dictionary, getting a random word, setting the answer, and playing the game with color-\/coded I/O with the user. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_a121ca37087749cdb07d43c99c8329521}\label{classgame_a121ca37087749cdb07d43c99c8329521}} 
+\index{game@{game}!check\_spaces@{check\_spaces}}
+\index{check\_spaces@{check\_spaces}!game@{game}}
+\doxysubsubsection{\texorpdfstring{check\_spaces()}{check\_spaces()}}
+{\footnotesize\ttfamily void game\+::check\+\_\+spaces (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Checking if input has any spaces; done this way as it\textquotesingle{}s called multiple times 
+\begin{DoxyParams}{Parameters}
+{\em input} & user input necessary from wordle game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input without spaces 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classgame_a9e2a116d255bd61dfb27f06bcc159962}\label{classgame_a9e2a116d255bd61dfb27f06bcc159962}} 
 \index{game@{game}!close\_dictionary@{close\_dictionary}}
 \index{close\_dictionary@{close\_dictionary}!game@{game}}
@@ -65,7 +81,7 @@ Playing the game itself. Keeps track of properly placed letters (green), correct
 \doxysubsubsection{\texorpdfstring{set\_answer()}{set\_answer()}}
 {\footnotesize\ttfamily void game\+::set\+\_\+answer (\begin{DoxyParamCaption}\item[{const std\+::string}]{ans }\end{DoxyParamCaption})}
 
-Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing 
+Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing more forcefully. 
 \begin{DoxyParams}{Parameters}
 {\em ans} & The answer to the current game of wordle. \\
 \hline
