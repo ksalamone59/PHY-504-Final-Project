@@ -10,7 +10,7 @@
 #include <string> 
 #include <map>
 #include <tuple>
-#include <sstream>
+#include <sstream> //for istringstream
 #include <cassert> //for assert
 #include <fstream> //for ifstream 
 #include <stdlib.h> //for srand() and coloring text
@@ -83,8 +83,17 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
 class player: public game //Class for the user to play the game through. Constructed this way so player can only access answer AFTER being given it by game class
 {
     private:
-        u_int n_guess; //Number of guesses needed to solve
-        bool properly_solved; //Did we solve the wordle?
+        /**
+        * How many guesses were inputted this game
+        */
+        u_int n_guess; 
+        /**
+         * Did we properly solve the game?
+        */
+        bool properly_solved; 
+        /**
+         * The true answer of the game
+        */
         std::string true_result;
     public:
         player();
