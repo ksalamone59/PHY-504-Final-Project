@@ -57,7 +57,7 @@ The Unit Testing for this repository will be just giving the game with certain a
 
 ## RUNNING UNIT TESTING 
 
-To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In a one liner: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````. The testing is done in two stages, described below:
+To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In a one liner: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````. The testing is done in two stages, described below (and above in more detail):
 
 - **FIRST TEST :**
   - Input "three" right away
