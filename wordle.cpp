@@ -24,18 +24,22 @@ int main()
     */
     if(DO_UNIT_TEST) //Debugging, which can be turned on or off by CMAKE. See README and Doxygen code
     {
-        std::cout << "In Unit Test mode! Please enter 'three'." << std::endl;
+        std::cout << "In Unit Test mode!" << std::endl;
+        std::istringstream in_guess{"three\n"}; //Setting answers for first unit testing
+        User.set_streams(in_guess);
         User.set_answer("three"); //USED THIS WAY FOR UNIT TESTING ONLY
-        User.set_solved_status(User.play_game()); //Give the first guess input as "three" please
+        User.set_solved_status(User.play_game()); 
         assert(User.get_answer() == "three"); //Asserting that we get "three" as the answer, true as a passed result and 1 as number of guesses
         assert(User.get_n_guess() == 1);
         assert(User.get_result() == true);
         User.print_player_results();
         std::cout << "Game Statistics: \n" << User;
 
-        std::cout << RESET << "\nSecond testing: \n"; //Again, see README for reccomended way to run arguments here
+        std::cout << RESET << "\nSecond testing: \n"; 
         player User1;
         User1.set_answer("three");
+        std::istringstream in_guess_second{"eeemm\ntteeh\naaaaa\nthrew\nhhhhh\nrrrrr"}; //Setting answers for second unit testing
+        User1.set_streams(in_guess_second);
         User1.set_solved_status(User1.play_game()); //This is testing the yellow letters, as well as what happens if you fail
         assert(User1.get_answer() == "three"); //Asserting that we get "three" as the real answer still
         assert(User1.get_n_guess() == 6);
@@ -45,6 +49,7 @@ int main()
 
         return 0; //Ending game here since we are doing unit testing
     }
+    User.set_streams(std::cin); //Regular gameplay: standard input!
     User.set_solved_status(User.play_game());
     User.print_player_results();
     std::cout << "Statistics: \n" << User;

@@ -42,6 +42,15 @@ void game::close_dictionary() //Close dictionary
 }
 
 /**
+ * Setting user defined input stream; output automatically is set to std::cout
+ * @param in Input stream; either std::cin for actual game or some istringstream for unit testing
+*/
+void game::set_streams(std::istream &in)
+{
+    this->input_stream = &in;
+}
+
+/**
  * Checking if input has any spaces; done this way as it's called multiple times
  * @param input user input necessary from wordle game
  * @return input without spaces
@@ -70,14 +79,13 @@ results game::play_game()
     {
         std::string input;
         std::cout << "Please enter your " << out_names[n_guess] << " guess: ";
-        std::getline(std::cin,input);
+        std::getline(*(this->input_stream),input);
         check_spaces(input);
         while(input.length() != 5) //Testing to ensure we get 5 letter words only
         {
             std::cout << "Oops! You need a five letter word to play the game. Please re enter a 5 letter word: ";
-            std::getline(std::cin,input);
+            std::getline(*(this->input_stream),input);
             check_spaces(input);
-            std::cout << input.length() << " " << input << std::endl;
         }
         bool good_word = false;
         while(!good_word) //Ensuring that all inputs are in the standard alphabet
@@ -88,7 +96,7 @@ results game::play_game()
                 if(!isalpha(c))
                 {
                     std::cout << "Oops! All characters must be in the alphabet. Character " << c << " is not allowed. Please re enter a 5 letter word, totally in the alphabet: ";
-                    std::cin >> input;
+                    *(this->input_stream) >> input;
                     check_spaces(input);
                     break;
                 }
@@ -127,7 +135,6 @@ results game::play_game()
             if(good_input[i]) //Write in green, continue
             {
                 std::cout << GREEN << input[i] << RESET;
-                n_occurences_in[input[i]]++;
                 continue;
             }
             bool draw_white = true; //Last check to draw letter nowhere in word as just plain

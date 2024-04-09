@@ -10,6 +10,7 @@
 #include <string> 
 #include <map>
 #include <tuple>
+#include <sstream>
 #include <cassert> //for assert
 #include <fstream> //for ifstream 
 #include <stdlib.h> //for srand() and coloring text
@@ -58,12 +59,21 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
         /**
          * Max number of wordle guesses*/ 
         const u_int MAX_N_GUESS{6}; 
+        /**
+         * Input stream
+        */
+        std::istream *input_stream;
+        /**
+         * Output stream (will always be cout)
+        */
+        std::ostream *output_stream = &std::cout;
     public: 
-        void get_dictionary(); //Open ofstream object
-        void close_dictionary(); //Close ofstream object
+        void get_dictionary(); //Open ifstream object
+        void close_dictionary(); //Close ifstream object
         void initialize(); //Gets the word for the game
         void set_answer(const std::string &ans); 
         void check_spaces(std::string &input); //Ensures no spaces in user input
+        void set_streams(std::istream &in);
         results play_game(); //Actually plays the game. <0> returns n_guess,  <1> returns if you solved correctly or not, <2> returns the answer
 };
 
