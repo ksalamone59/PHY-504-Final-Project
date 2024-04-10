@@ -88,10 +88,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e2a116d255bd61dfb27f06bcc159962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3140391458e0e2cefcacaca8bd50eb20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a3140391458e0e2cefcacaca8bd50eb20">initialize</a> ()</td></tr>
 <tr class="separator:a3140391458e0e2cefcacaca8bd50eb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a956ac6a474727fb518b2fd85e34cd812"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a956ac6a474727fb518b2fd85e34cd812">set_answer</a> (const std::string ans)</td></tr>
-<tr class="separator:a956ac6a474727fb518b2fd85e34cd812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24f6578c13375212b75a2143176a999"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ae24f6578c13375212b75a2143176a999">set_answer</a> (const std::string &amp;ans)</td></tr>
+<tr class="separator:ae24f6578c13375212b75a2143176a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121ca37087749cdb07d43c99c8329521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a121ca37087749cdb07d43c99c8329521">check_spaces</a> (std::string &amp;input)</td></tr>
 <tr class="separator:a121ca37087749cdb07d43c99c8329521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7b24f9f66a39de2f952254ac20b69e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ab7b24f9f66a39de2f952254ac20b69e7">set_streams</a> (std::istream &amp;in)</td></tr>
+<tr class="separator:ab7b24f9f66a39de2f952254ac20b69e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9adbf30c599dbbcc19a130d7f63a29e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wordle_8h.html#a062d4df9a098e840075de669fbd5fa7e">results</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ac9adbf30c599dbbcc19a130d7f63a29e">play_game</a> ()</td></tr>
 <tr class="separator:ac9adbf30c599dbbcc19a130d7f63a29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -195,8 +197,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a956ac6a474727fb518b2fd85e34cd812"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a956ac6a474727fb518b2fd85e34cd812">&#9670;&nbsp;</a></span>set_answer()</h2>
+<a id="ae24f6578c13375212b75a2143176a999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24f6578c13375212b75a2143176a999">&#9670;&nbsp;</a></span>set_answer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +206,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void game::set_answer </td>
           <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>ans</em></td><td>)</td>
           <td></td>
         </tr>
@@ -213,6 +215,30 @@ Public Member Functions</h2></td></tr>
 <p>Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing more forcefully. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ans</td><td>The answer to the current game of wordle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab7b24f9f66a39de2f952254ac20b69e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b24f9f66a39de2f952254ac20b69e7">&#9670;&nbsp;</a></span>set_streams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game::set_streams </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Setting user defined input stream; output automatically is set to std::cout </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream; either std::cin for actual game or some istringstream for unit testing </td></tr>
   </table>
   </dd>
 </dl>

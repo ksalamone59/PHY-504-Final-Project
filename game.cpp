@@ -3,7 +3,7 @@
 
 /**
  * @file game.cpp
- * @brief Defining object specific to class @ref game; actually playing the wordle game.
+ * @brief Defining objects specific to class @ref game; actually playing the wordle game.
 */
 
 /**
@@ -78,7 +78,7 @@ results game::play_game()
     while(n_guess < MAX_N_GUESS) //Only 6 guesses
     {
         std::string input;
-        std::cout << "Please enter your " << out_names[n_guess] << " guess: ";
+        std::cout << "Please enter your " << out_names[n_guess] << " guess: "; //Does NOT need to be a valid english word
         std::getline(*(this->input_stream),input);
         check_spaces(input);
         while(input.length() != 5) //Testing to ensure we get 5 letter words only

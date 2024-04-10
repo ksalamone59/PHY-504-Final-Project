@@ -60,13 +60,9 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
          * Max number of wordle guesses*/ 
         const u_int MAX_N_GUESS{6}; 
         /**
-         * Input stream
+         * Input stream (allows for custom inputs for unit testing)
         */
         std::istream *input_stream;
-        /**
-         * Output stream (will always be cout)
-        */
-        std::ostream *output_stream = &std::cout;
     public: 
         void get_dictionary(); //Open ifstream object
         void close_dictionary(); //Close ifstream object

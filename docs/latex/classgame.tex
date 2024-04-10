@@ -22,9 +22,11 @@ void \mbox{\hyperlink{classgame_a9e2a116d255bd61dfb27f06bcc159962}{close\+\_\+di
 \item 
 void \mbox{\hyperlink{classgame_a3140391458e0e2cefcacaca8bd50eb20}{initialize}} ()
 \item 
-void \mbox{\hyperlink{classgame_a956ac6a474727fb518b2fd85e34cd812}{set\+\_\+answer}} (const std\+::string ans)
+void \mbox{\hyperlink{classgame_ae24f6578c13375212b75a2143176a999}{set\+\_\+answer}} (const std\+::string \&ans)
 \item 
 void \mbox{\hyperlink{classgame_a121ca37087749cdb07d43c99c8329521}{check\+\_\+spaces}} (std\+::string \&input)
+\item 
+void \mbox{\hyperlink{classgame_ab7b24f9f66a39de2f952254ac20b69e7}{set\+\_\+streams}} (std\+::istream \&in)
 \item 
 \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} \mbox{\hyperlink{classgame_ac9adbf30c599dbbcc19a130d7f63a29e}{play\+\_\+game}} ()
 \end{DoxyCompactItemize}
@@ -75,15 +77,26 @@ Initializing the Wordle game. Uses random number generator to get a random word 
 Playing the game itself. Keeps track of properly placed letters (green), correct letters in the incorrect place (yellow) and incorrect letters (white). Allows 6 user gueses, forces all lowercase and 5 letters long (spaces do not count). \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} of the game. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classgame_a956ac6a474727fb518b2fd85e34cd812}\label{classgame_a956ac6a474727fb518b2fd85e34cd812}} 
+\mbox{\Hypertarget{classgame_ae24f6578c13375212b75a2143176a999}\label{classgame_ae24f6578c13375212b75a2143176a999}} 
 \index{game@{game}!set\_answer@{set\_answer}}
 \index{set\_answer@{set\_answer}!game@{game}}
 \doxysubsubsection{\texorpdfstring{set\_answer()}{set\_answer()}}
-{\footnotesize\ttfamily void game\+::set\+\_\+answer (\begin{DoxyParamCaption}\item[{const std\+::string}]{ans }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void game\+::set\+\_\+answer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ans }\end{DoxyParamCaption})}
 
 Setting the answer to the wordle. Used primarily in the initializing function, but also used in unit testing more forcefully. 
 \begin{DoxyParams}{Parameters}
 {\em ans} & The answer to the current game of wordle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgame_ab7b24f9f66a39de2f952254ac20b69e7}\label{classgame_ab7b24f9f66a39de2f952254ac20b69e7}} 
+\index{game@{game}!set\_streams@{set\_streams}}
+\index{set\_streams@{set\_streams}!game@{game}}
+\doxysubsubsection{\texorpdfstring{set\_streams()}{set\_streams()}}
+{\footnotesize\ttfamily void game\+::set\+\_\+streams (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})}
+
+Setting user defined input stream; output automatically is set to std\+::cout 
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream; either std\+::cin for actual game or some istringstream for unit testing \\
 \hline
 \end{DoxyParams}
 
