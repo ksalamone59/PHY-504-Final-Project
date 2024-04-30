@@ -92,14 +92,45 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae24f6578c13375212b75a2143176a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121ca37087749cdb07d43c99c8329521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a121ca37087749cdb07d43c99c8329521">check_spaces</a> (std::string &amp;input)</td></tr>
 <tr class="separator:a121ca37087749cdb07d43c99c8329521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade84a2035aba878775fc08578d0444c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ade84a2035aba878775fc08578d0444c1">check_length</a> (std::string &amp;input)</td></tr>
+<tr class="separator:ade84a2035aba878775fc08578d0444c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0392304ea298eba627317b662d93c2f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a0392304ea298eba627317b662d93c2f5">space_input_only</a> (const std::string &amp;input)</td></tr>
+<tr class="separator:a0392304ea298eba627317b662d93c2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b24f9f66a39de2f952254ac20b69e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ab7b24f9f66a39de2f952254ac20b69e7">set_streams</a> (std::istream &amp;in)</td></tr>
 <tr class="separator:ab7b24f9f66a39de2f952254ac20b69e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5bc29bedb67ba0866daf2facdef14f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#a9b5bc29bedb67ba0866daf2facdef14f">take_input</a> (std::string &amp;input)</td></tr>
+<tr class="separator:a9b5bc29bedb67ba0866daf2facdef14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9adbf30c599dbbcc19a130d7f63a29e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wordle_8h.html#a062d4df9a098e840075de669fbd5fa7e">results</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame.html#ac9adbf30c599dbbcc19a130d7f63a29e">play_game</a> ()</td></tr>
 <tr class="separator:ac9adbf30c599dbbcc19a130d7f63a29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main class for the wordle game. Contains the logic for opening/closing the dictionary, getting a random word, setting the answer, and playing the game with color-coded I/O with the user. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ade84a2035aba878775fc08578d0444c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade84a2035aba878775fc08578d0444c1">&#9670;&nbsp;</a></span>check_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game::check_length </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Making sure the word is 5 characters long </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>user input necessary from wordle game </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>input of length 5 </dd></dl>
+
+</div>
+</div>
 <a id="a121ca37087749cdb07d43c99c8329521"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a121ca37087749cdb07d43c99c8329521">&#9670;&nbsp;</a></span>check_spaces()</h2>
 
@@ -242,6 +273,44 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0392304ea298eba627317b662d93c2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0392304ea298eba627317b662d93c2f5">&#9670;&nbsp;</a></span>space_input_only()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool game::space_input_only </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if input is only spaces </p>
+
+</div>
+</div>
+<a id="a9b5bc29bedb67ba0866daf2facdef14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5bc29bedb67ba0866daf2facdef14f">&#9670;&nbsp;</a></span>take_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void game::take_input </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reading in input from user nicely </p>
 
 </div>
 </div>

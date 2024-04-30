@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eplayer_27',['~player',['../classplayer.html#aab5d2e47b80e0481f09ca0df8b823057',1,'player']]]
+  ['yellow_29',['YELLOW',['../wordle_8h.html#a8bc779337e61d3ab6ad13f81e102f327',1,'wordle.h']]]
 ];

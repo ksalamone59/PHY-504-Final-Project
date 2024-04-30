@@ -1,5 +1,3 @@
 wordle 
 *.o
 .vscode
-test
-docs/

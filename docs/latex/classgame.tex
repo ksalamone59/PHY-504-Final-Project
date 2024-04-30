@@ -26,7 +26,13 @@ void \mbox{\hyperlink{classgame_ae24f6578c13375212b75a2143176a999}{set\+\_\+answ
 \item 
 void \mbox{\hyperlink{classgame_a121ca37087749cdb07d43c99c8329521}{check\+\_\+spaces}} (std\+::string \&input)
 \item 
+void \mbox{\hyperlink{classgame_ade84a2035aba878775fc08578d0444c1}{check\+\_\+length}} (std\+::string \&input)
+\item 
+bool \mbox{\hyperlink{classgame_a0392304ea298eba627317b662d93c2f5}{space\+\_\+input\+\_\+only}} (const std\+::string \&input)
+\item 
 void \mbox{\hyperlink{classgame_ab7b24f9f66a39de2f952254ac20b69e7}{set\+\_\+streams}} (std\+::istream \&in)
+\item 
+void \mbox{\hyperlink{classgame_a9b5bc29bedb67ba0866daf2facdef14f}{take\+\_\+input}} (std\+::string \&input)
 \item 
 \mbox{\hyperlink{wordle_8h_a062d4df9a098e840075de669fbd5fa7e}{results}} \mbox{\hyperlink{classgame_ac9adbf30c599dbbcc19a130d7f63a29e}{play\+\_\+game}} ()
 \end{DoxyCompactItemize}
@@ -36,6 +42,20 @@ void \mbox{\hyperlink{classgame_ab7b24f9f66a39de2f952254ac20b69e7}{set\+\_\+stre
 The main class for the wordle game. Contains the logic for opening/closing the dictionary, getting a random word, setting the answer, and playing the game with color-\/coded I/O with the user. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_ade84a2035aba878775fc08578d0444c1}\label{classgame_ade84a2035aba878775fc08578d0444c1}} 
+\index{game@{game}!check\_length@{check\_length}}
+\index{check\_length@{check\_length}!game@{game}}
+\doxysubsubsection{\texorpdfstring{check\_length()}{check\_length()}}
+{\footnotesize\ttfamily void game\+::check\+\_\+length (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Making sure the word is 5 characters long 
+\begin{DoxyParams}{Parameters}
+{\em input} & user input necessary from wordle game \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input of length 5 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classgame_a121ca37087749cdb07d43c99c8329521}\label{classgame_a121ca37087749cdb07d43c99c8329521}} 
 \index{game@{game}!check\_spaces@{check\_spaces}}
 \index{check\_spaces@{check\_spaces}!game@{game}}
@@ -99,7 +119,19 @@ Setting user defined input stream; output automatically is set to std\+::cout
 {\em in} & Input stream; either std\+::cin for actual game or some istringstream for unit testing \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classgame_a0392304ea298eba627317b662d93c2f5}\label{classgame_a0392304ea298eba627317b662d93c2f5}} 
+\index{game@{game}!space\_input\_only@{space\_input\_only}}
+\index{space\_input\_only@{space\_input\_only}!game@{game}}
+\doxysubsubsection{\texorpdfstring{space\_input\_only()}{space\_input\_only()}}
+{\footnotesize\ttfamily bool game\+::space\+\_\+input\+\_\+only (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})}
 
+Checks if input is only spaces \mbox{\Hypertarget{classgame_a9b5bc29bedb67ba0866daf2facdef14f}\label{classgame_a9b5bc29bedb67ba0866daf2facdef14f}} 
+\index{game@{game}!take\_input@{take\_input}}
+\index{take\_input@{take\_input}!game@{game}}
+\doxysubsubsection{\texorpdfstring{take\_input()}{take\_input()}}
+{\footnotesize\ttfamily void game\+::take\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+Reading in input from user nicely 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
