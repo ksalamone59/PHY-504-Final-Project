@@ -63,10 +63,12 @@ To run the Unit Test, please make sure you run "make clean" to set everything fo
 
 - **FIRST TEST :**
   - Input "three" right away
-- **SECOND TEST :** input, for visuals:
+- **SECOND TEST :** input, for visuals (the inuputs with numbers won't be printed, but they'll be told that there is incorrect input):
   - "eeemm"
-  - "tteeh"
+  - "nTTE3h"
+  - "n33TEN"
+  - "ntteEH"
   - "aaaaa"
   - "threw"
   - "hhhhh"
-  - "rrrrr"
+  - "eeeel"
