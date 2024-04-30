@@ -1,0 +1,20 @@
+In Unit Test mode!
+[0;37;40m
+Please enter your first guess: [0;32;40mthree[0;37;40m
+Well done! You properly solved the wordle. 
+Game Statistics: 
+Number of Guesses: 1. Was the Wordle solved? Yes. The real answer was: three[0;37.
+[0;37;40m
+Second testing: 
+[0;37;40m
+Please enter your first guess: [0;33;40me[0;37;40m[0;33;40me[0;37;40m[0;37;40me[0;37;40m[0;37;40mm[0;37;40m[0;37;40mm[0;37;40m
+Please enter your second guess: 
+Oops! All characters must be in the alphabet. Character 3 is not allowed. Please re enter a 5 letter word, totally in the alphabet: 
+Oops! All characters must be in the alphabet. Character 3 is not allowed. Please re enter a 5 letter word, totally in the alphabet: [0;32;40mt[0;37;40m[0;37;40mt[0;37;40m[0;33;40me[0;37;40m[0;32;40me[0;37;40m[0;33;40mh[0;37;40m
+Please enter your third guess: [0;37;40ma[0;37;40m[0;37;40ma[0;37;40m[0;37;40ma[0;37;40m[0;37;40ma[0;37;40m[0;37;40ma[0;37;40m
+Please enter your fourth guess: [0;32;40mt[0;37;40m[0;32;40mh[0;37;40m[0;32;40mr[0;37;40m[0;32;40me[0;37;40m[0;37;40mw[0;37;40m
+Please enter your fifth guess: [0;37;40mh[0;37;40m[0;32;40mh[0;37;40m[0;37;40mh[0;37;40m[0;37;40mh[0;37;40m[0;37;40mh[0;37;40m
+Please enter your sixth and final guess: [0;33;40me[0;37;40m[0;37;40me[0;37;40m[0;37;40me[0;37;40m[0;32;40me[0;37;40m[0;37;40ml[0;37;40m
+Unfortunately you did not properly solve this Wordle.
+Game Statistics:
+Number of Guesses: 6. Was the Wordle solved? No. The real answer was: three[0;37.
