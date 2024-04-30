@@ -38,7 +38,7 @@ int main()
         std::cout << RESET << "\nSecond testing: \n"; 
         player User1;
         User1.set_answer("three");
-        std::istringstream in_guess_second{"eeemm\ntteeh\naaaaa\nthrew\nhhhhh\nrrrrr"}; //Setting answers for second unit testing
+        std::istringstream in_guess_second{"eeemm\nTTE3h\n33TEN\ntteEH\naaaaa\nthrew\nhhhhh\neeeel"}; //Setting answers for second unit testing
         User1.set_streams(in_guess_second);
         User1.set_solved_status(User1.play_game()); //This is testing the yellow letters, as well as what happens if you fail
         assert(User1.get_answer() == "three"); //Asserting that we get "three" as the real answer still

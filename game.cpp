@@ -66,6 +66,48 @@ void game::check_spaces(std::string &input)
     }
 }
 
+
+/**
+ * Making sure the word is 5 characters long
+ * @param input user input necessary from wordle game
+ * @return input of length 5
+*/
+void game::check_length(std::string &input)
+{
+    while(input.length() != 5) //Testing to ensure we get 5 letter words only
+    {
+        std::cout << "Oops! You need a five letter word to play the game. Please re enter a 5 letter word: ";
+        std::getline(*(this->input_stream),input);
+        check_spaces(input);
+    }
+}
+
+/**
+ * Checks if input is only spaces
+*/
+bool game::space_input_only(const std::string &input)
+{
+    for(const char &c: input)
+    {
+        if(!isspace(c)) return false;
+    }
+    return true;
+}
+\
+/**
+ * Reading in input from user nicely
+*/
+void game::take_input(std::string &input)
+{
+    input = "";
+    while(input.empty() || space_input_only(input)) 
+    {
+        std::getline(*(this->input_stream),input); //Had weird bug with empty inputs/if you just give " " as input
+    }
+    check_spaces(input);
+    check_length(input);
+}
+
 /**
  * Playing the game itself. Keeps track of properly placed letters (green), correct letters in the incorrect place (yellow) and incorrect letters (white). Allows 6 user gueses, forces all lowercase and 5 letters long (spaces do not count). 
  * @return @ref results of the game.
@@ -79,14 +121,7 @@ results game::play_game()
     {
         std::string input;
         std::cout << "Please enter your " << out_names[n_guess] << " guess: "; //Does NOT need to be a valid english word
-        std::getline(*(this->input_stream),input);
-        check_spaces(input);
-        while(input.length() != 5) //Testing to ensure we get 5 letter words only
-        {
-            std::cout << "Oops! You need a five letter word to play the game. Please re enter a 5 letter word: ";
-            std::getline(*(this->input_stream),input);
-            check_spaces(input);
-        }
+        take_input(input);
         bool good_word = false;
         while(!good_word) //Ensuring that all inputs are in the standard alphabet
         {
@@ -95,9 +130,8 @@ results game::play_game()
             {
                 if(!isalpha(c))
                 {
-                    std::cout << "Oops! All characters must be in the alphabet. Character " << c << " is not allowed. Please re enter a 5 letter word, totally in the alphabet: ";
-                    *(this->input_stream) >> input;
-                    check_spaces(input);
+                    std::cout << "\nOops! All characters must be in the alphabet. Character " << c << " is not allowed. Please re enter a 5 letter word, totally in the alphabet: ";
+                    take_input(input);
                     break;
                 }
                 else n_good++;

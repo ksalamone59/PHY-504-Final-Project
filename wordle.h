@@ -69,7 +69,10 @@ class game //Didn't need constructor, since everything is hard coded/uses RNG (a
         void initialize(); //Gets the word for the game
         void set_answer(const std::string &ans); 
         void check_spaces(std::string &input); //Ensures no spaces in user input
-        void set_streams(std::istream &in);
+        void check_length(std::string &input); //Check length of word
+        bool space_input_only(const std::string &input); //Checks if input is only space characters
+        void set_streams(std::istream &in); //Setting input stream
+        void take_input(std::string &input); //Taking in user input
         results play_game(); //Actually plays the game. <0> returns n_guess,  <1> returns if you solved correctly or not, <2> returns the answer
 };
 
