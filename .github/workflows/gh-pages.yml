@@ -15,4 +15,4 @@ jobs:
         run: make clean && make CFLAGS="-DUNIT_TEST" && ./wordle > CHECK.txt #Making one liner to compile and run code to output file
 
       - name: Check Output
-        run: diff CHECK.out test.txt
+        run: diff CHECK.txt test.txt
