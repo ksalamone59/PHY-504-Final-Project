@@ -55,16 +55,20 @@ Makes use of Doxygen to create documentation hub. Upon calling "doxyen Doxyfile"
 
 The Unit Testing for this repository will be just giving the game with certain arguments. Example: I am forcing the word to be "three", so therefore if we instantize the game and instantly give "Three", we should get back true and that n_guess = 1 (which I will assert). As well, if we give a list of strings for the user to input in a row, they can ensure the coloring is proper and failed results work. I.e. if we force "three" again as the true result: if we start with "eeemm" (we don't care if the inputs are actual words, as per the problem statement) the first two "e" should be yellow, the third white and the two "m" white. Then if we go with "tteeh" the first "t" will be green, second will be white, first "e" yellow, second green and the "h" will be yellow. Then in order you can go: "aaaaa" for all white, "threw" for all green besdies the w, "hhhhh" for one green in the second spot and, finally, "rrrrr" for one green in the third spot, along with the failed results. These are all testing that the wordle function is behaving as expected and properly; since it requires user input the user can feel free to do their own unit testing on the word "three" as well, beyond what I have given (while of course, understanding the rules of wordle). 
 
+There will also be some testing in the form of a github pages yml file similar to HW6; this is done automatically upon pushing the code and making use of our unit testing output, stored in "test.txt".
+
 ## RUNNING UNIT TESTING 
 
 To run the Unit Test, please make sure you run "make clean" to set everything for initialization. Then, run "make CFLAGS="-DUNIT_TEST"" and call ./wordle. In a one liner: ````make clean && make CFLAGS="-DUNIT_TEST" && ./wordle````. The testing is done in two stages, described below (and above in more detail):
 
 - **FIRST TEST :**
   - Input "three" right away
-- **SECOND TEST :** input, for visuals:
+- **SECOND TEST :** input, for visuals (the inuputs with numbers won't be printed, but they'll be told that there is incorrect input):
   - "eeemm"
-  - "tteeh"
+  - "nTTE3h"
+  - "n33TEN"
+  - "ntteEH"
   - "aaaaa"
   - "threw"
   - "hhhhh"
-  - "rrrrr"
+  - "eeeel"
